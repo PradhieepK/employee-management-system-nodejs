@@ -1,0 +1,43 @@
+# Node.js dependencies
+/node_modules/
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Dependency directory
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment variables file
+.env
+
+# npm and yarn lock files (if you are using a different package manager)
+package-lock.json
+yarn.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage folder (for code coverage tools like Istanbul or Jest)
+coverage/
+
+# Build output
+/dist
+/build
+
+# IDE or editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Temporary files
+*.swp
+*.swo
+
+# Optional npm configuration file
+.npmrc
