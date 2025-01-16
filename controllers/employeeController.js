@@ -19,7 +19,13 @@ const validateEmployeeData = (data) => {
   }
 
   // Age Validation
-  if (!age || typeof age !== "number" || age < 18 || age > 65) {
+  const numericAge = Number(age);
+  if (
+    !numericAge ||
+    typeof numericAge !== "number" ||
+    numericAge < 18 ||
+    numericAge > 65
+  ) {
     errors.push("Age must be a number between 18 and 65.");
   }
 
