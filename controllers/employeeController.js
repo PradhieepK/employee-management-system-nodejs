@@ -6,7 +6,6 @@ const validateEmployeeData = (data) => {
   const { name, age, position, department } = data;
   const errors = [];
 
-  // Name Validation
   if (
     !name ||
     typeof name !== "string" ||
@@ -18,7 +17,6 @@ const validateEmployeeData = (data) => {
     );
   }
 
-  // Age Validation
   const numericAge = Number(age);
   if (
     !numericAge ||
@@ -29,7 +27,6 @@ const validateEmployeeData = (data) => {
     errors.push("Age must be a number between 18 and 65.");
   }
 
-  // Position Validation
   if (
     !position ||
     typeof position !== "string" ||
@@ -41,7 +38,6 @@ const validateEmployeeData = (data) => {
     );
   }
 
-  // Department Validation
   if (
     !department ||
     typeof department !== "string" ||
@@ -353,7 +349,6 @@ const updateEmployee = (req, res) => {
     return res.status(400).json(responsePayload);
   }
 
-  // Validate Employee Data
   const validationErrors = validateEmployeeData(req.body);
   if (validationErrors.length > 0) {
     const responsePayload = { errors: validationErrors };
@@ -425,7 +420,6 @@ const deleteEmployee = (req, res) => {
   const endpoint = `DELETE - /employees/${id}`;
   const requestPayload = { params: req.params };
 
-  // Validate ID
   const idError = validateId(id);
   if (idError) {
     const responsePayload = { error: idError };
