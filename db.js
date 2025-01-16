@@ -10,16 +10,10 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.error("Error connecting to the database:", err);
+    console.error("Error connecting to the EMS DB database:", err);
     return;
   }
-  console.log("MySQL Connected...");
+  console.log("EMS DB Connected");
 });
-// const pool = mysql.createPool({
-//   host: process.env.DB_HOST,
-//   user: process.env.DB_USER,
-//   database: process.env.DB_NAME,
-//   password: process.env.DB_PASSWORD,
-// });
 
 module.exports = db;
